@@ -1,0 +1,66 @@
+*{
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+}
+body{
+height: 100vh;
+width: 100%;
+background-color: white;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.B{
+    width:30% ;
+    height: 200px;
+    border: 4px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    
+
+}
+.B::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    opacity: 0;
+    transition-duration: 2s;
+    scale: 1s;
+    z-index: -1;
+    border: 4px solid yellow;
+    
+
+
+}
+.B:hover::before{
+opacity: 1;
+border: 4px solid blue;
+
+}
+.B::after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    transform: translateX(600%);
+    scale: 0.5ms;
+    z-index: -1;
+    transition-duration: 0.5s;
+
+
+}
+.B:hover::after{
+    transform: translateX(0);
+    opacity: 0;
+    background-color: white;
+
+}

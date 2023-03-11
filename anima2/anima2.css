@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+
+}
+.contenair{
+    width:  100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    
+    
+    
+    
+}
+ .bouton{
+ width: 30%;
+    height: 100px;
+    position: absolute;
+    border: 2px solid gray;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    
+}
+    
+    
+ .bouton::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color:red;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    transform: rotate(90deg); 
+    transform-origin: bottom right;
+    transition: 1s;
+    z-index: -1;
+    
+box-sizing: border-box;
+    
+ }
+.bouton::before{
+ content :"";
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    transition: 1s;
+    z-index: -1;
+    
+}
+.bouton:hover::after{
+    transform: rotate(0deg);
+    
+}
+.bouton:hover::before{
+    transform: rotate(0deg);
+   
+}
+    

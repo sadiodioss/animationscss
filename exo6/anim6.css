@@ -1,0 +1,75 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body{
+    height: 100vh;
+    width: 90%;
+    
+}
+.contenair{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.caree{
+    width: 30em;
+    height: 200px;
+    border: 5px  solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    
+}
+.caree::before{
+    content: "HOVERABLE";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition-duration: 1s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: greenyellow;
+    transform: translate(-100% ,100%);
+    
+
+}
+.caree:hover::before{
+    
+    transform: translate(0,0);
+    
+}
+
+.caree::after{
+    content: "HOVERABLE";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition-duration: 1s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    transform: translate(0 ,0);
+    color: azure;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.caree:hover::after{
+transform: translate(100%,-100%);
+}

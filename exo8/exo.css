@@ -1,0 +1,70 @@
+*{
+box-sizing: border-box;
+padding: 0;
+
+}
+body{
+
+    height: 100vh;
+    width: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.SE{
+    width: 28%;
+    height: 200px;
+    border: 2px solid red;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+.SE::after{
+    content: "HOVERNABLE";
+     width: 100%;
+     height: 100%;
+     background-color: black;
+     position: absolute;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transform-origin: top;
+    transform: translateX(-1);
+    transition: 0.5s;
+    transform: scale(10ms);
+    opacity: 0.1;
+    color: white;
+
+
+}
+.SE::before{
+    content: "HOVERNABLE";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(0);
+    transform-origin: top;
+    transition: 0.5s;
+    transform: scale(10ms);
+    opacity: 0.1;
+    color: white;
+}
+.SE:hover::after{
+    transform: translateX(100%);
+    height: 10px;
+    
+}
+.SE:hover::before{
+    transform: translateX(-100%);
+    height: 10px;
+    
+    
+}
